@@ -32,7 +32,7 @@ int main(void)
 						putchar(',');
 						putchar(' ');
 					}
-					m++;
+					l++;
 				}
 				l = 48;
 				k++;
