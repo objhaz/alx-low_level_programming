@@ -1,12 +1,9 @@
 #include <stdio.h>
-
 /**
- *
- * main - Print letters of the alphabets
+ * main -print all the alphabets in lowwer cases
  *
  * Return: Always 0 (Success)
  */
-
 int main(void)
 {
 	char ch;
