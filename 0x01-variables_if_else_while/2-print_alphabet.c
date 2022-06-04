@@ -1,16 +1,19 @@
 #include <stdio.h>
+
 /**
- * main - Prints all letters of the alphabet in lowwer cases
  *
- * Return: Always 0 (Succes)
+ * main - Print letters of the alphabets
+ *
+ * Return: Always 0 (Success)
  */
+
 int main(void)
 {
 	char ch;
 	for (ch = 'a'; ch <= 'z'; ch++)
-	{
-		putchar(ch);
-	}
+{
+	putchar(ch);
+}
 	putchar('\n');
 	return (0);
 }
