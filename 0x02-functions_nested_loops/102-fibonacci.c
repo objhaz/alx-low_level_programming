@@ -1,0 +1,27 @@
+#include<stdio.h>
+
+/**
+ * main - first 50 fibonatchi.
+ *
+ * Return: void.
+ */
+int main(void)
+{
+	int a, b, s, i;
+
+	a = 1;
+	b = 2;
+	s = 3;
+	printf("%d, ", a);
+	printf("%d, ", b);
+	for (i = 3; i < 50; i++)
+	{
+		printf("%l, ", s);
+		a = b;
+		b = s;
+		s = a + b;
+	}
+	printf("%d\n", s);
+
+	return (0);
+}
