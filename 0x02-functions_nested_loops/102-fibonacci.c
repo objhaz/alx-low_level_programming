@@ -3,11 +3,11 @@
 /**
  * main - first 50 fibonatchi.
  *
- * Return: void.
+ * Return: Always 0 (Success).
  */
 int main(void)
 {
-	int a, b, s, i;
+	long int a, b, s, i;
 
 	a = 1;
 	b = 2;
