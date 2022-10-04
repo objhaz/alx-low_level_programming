@@ -1,44 +1,41 @@
+#include <stdio.h>
 #include <stdlib.h>
 #include "main.h"
 
 /**
-* str_concat - a function that concatenates two strings
-* @s1: holds the first string
-* @s2: holds the second string
-* Return: the pointer to a string
+* alloc_grid - a function that returns a pointer to 2 dimensional array of int
+* @width: integer
+* @height: integer
+* Return: return a pointer to the array otherwise return NULL
 **/
 
-char *str_concat(char *s1, char *s2)
+int **alloc_grid(int width, int height)
 {
+	int **p;
+
 	int i;
+
 	int j;
-	int k;
-	char *p;
 
-	i = 0;
-	j = 0;
-	k = 0;
-
-	if (!s1)
-		s1 = "";
-	if (!s2)
-		s2 = "";
-	while (s1[i])
-		i += 1;
-	while (s2[j])
-		j += 1;
-	p = malloc((i + j) * sizeof(char) + 1);
+	if (width <= 0 || height <= 0)
+		return (NULL);
+	p = malloc(sizeof(int *) * height);
 	if (p == NULL)
 		return (NULL);
-	while (*s1)
+	for (i = 0; i < height; i++)
 	{
-		p[k] = *s1++;
-		k += 1;
+		p[i] = malloc(sizeof(int) * width);
+		if (p[i] == NULL)
+		{
+			for (i = i - 1; i >= 0; i--)
+			{
+				free(p[i]);
+			}
+			free(p);
+			return (NULL);
+		}
 	}
-	while (*s2)
-	{
-		p[k] = *s2++;
-		k += 1;
-	}
+	for (i = 0; j < width; j++)
+		p[i][j] = 0;
 	return (p);
 }
